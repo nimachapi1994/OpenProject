@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "SelectPageType";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container text-center">
+
+        <div class="col-sm-2 col-md-2 col-xs-1"></div>
+        <div class="col-md-8 col-sm-8 col-xs-10">
+           
+            <div class="form-group"style="padding-left:25%;font-family:Tahoma" >
+                <br />
+                <h2 style="font-family:Tahoma;color:#1d2f81">لطفا صفحه را انتخاب کنید</h2>
+                <hr />
+                <form action="/ManageContentPages/Editpages" method="post">
+                    <select class="form-control text-center" id="SelectPage" name="id" style="text-align:right;color:#36529b" dir="rtl">
+
+                        <option value="1">معرفی شرکت</option>
+                        <option value="2">کوبیاکس چیست؟</option>
+                        <option value="3">تاییده ها و گواهی نامه ها</option>
+                        <option value="4">اجزای تشکیل دهنده دال کوبیاکس</option>
+                        <option value="5">محصولات</option>
+                        <option value="6">مزایای فنی و اقتصادی</option>
+                        <option value="7">براورد و محاسبات</option>
+                        <option value="8">طراحی</option>
+                        <option value="9">روش اجرا</option>
+
+
+                    </select>
+                    <br />
+                    <button class="btn btn-success" style="font-family:Tahoma"> رفتن برای ویرایش</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-xs-1"></div>
+    </div>
+
+

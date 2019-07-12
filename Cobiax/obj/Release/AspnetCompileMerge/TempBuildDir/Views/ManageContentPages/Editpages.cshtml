@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Editpages";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@section scripts{
+
+
+
+    <script src="~/Plugins/ckeditor/ckeditor.js"></script>
+}
+<hr />
+<style>
+    .keds label{
+        font-family:Tahoma;
+    }
+</style>
+<div class="row">
+    <form action="/ManageContentPages/EditPagesConfirm" method="post">
+        <div class="col-md-1 col-sm-1 "></div>
+        <div class="col-md-10 col-sm-10 col-xs-12 keds">
+
+            @foreach (var item in ViewBag.showPage as IEnumerable<Cobiax.Models.Sp_SelectOnePage_Result>)
+
+        {
+            if (item.Id == 1)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه معرفی شرکت</label>
+            }
+            if (item.Id == 2)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه کوبیاکس چیست؟</label>
+            }
+            if (item.Id == 3)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه تاییده ها و گواهی نامه ها</label>
+            }
+            if (item.Id == 4)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه اجزای تشکیل دهنده دال کوبیاکس</label>
+            }
+            if (item.Id == 5)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه محصولات</label>
+            }
+            if (item.Id == 6)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه معرفی مزایای فنی و اقتصادی</label>
+            }
+            if (item.Id == 7)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه براورد و محاسبات</label>
+            }
+            if (item.Id == 8)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه طراحی</label>
+            }
+            if (item.Id == 9)
+            {
+                    <label class="control-label pull-right" for="ck">توضیحات کامل صفحه روش اجرا</label>
+            }
+                <br />
+               
+
+                <textarea class="form-control" dir="rtl" id="ck" name="PageTxt">@item.PageTxt</textarea>
+        }
+            <br />
+
+
+           <div style="padding-right:40%;padding-left:40%"><button class="btn btn-success btn-block"style="font-family:Tahoma">ذخیره محتوای این صفحه</button></div>
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="col-md-1 col-sm-1 "></div>
+    </form>
+</div>
+
+<script>
+    CKEDITOR.replace('ck', { filebrowserImageUploadUrl: '/Editor/Upload' })
+
+</script>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+

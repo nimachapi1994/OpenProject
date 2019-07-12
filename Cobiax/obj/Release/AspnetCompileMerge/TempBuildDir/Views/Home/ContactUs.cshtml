@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+@for (int i = 0; i < 2; i++)
+{
+    <br />
+}
+
+
+<body style="background-color:#a59191;color:white"></body>
+
+
+
+
+
+
+
+<section class="contact-page section-padding"style="color:white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <h2>با ما در <span>ارتباط</span> باشید</h2>
+                    <div class="title-shape">
+                        <span></span>
+                    </div>
+<p>در این قسمت می توانید با تیم مدیریت کوبیاکس در ارتباط باشید ما در اسرع وقت پاسخگوی شما هستیم</p>                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="contact-left wow fadeInUp" style="visibility: visible; animation-name: fadeInUp">
+                    <h4>اطلاعات بیشتر</h4>
+                    <ul class="contact-address"style="color:white">
+                        <li style="color:white"><i class="flaticon-placeholder-1"></i>شیراز , فرهنگ شهر نبش کوچه 52 ساختمان پارسیان طبقه دوم</li>
+                        <li><i class="flaticon-envelope"></i><a href="mailto:CobiaxShiraz@Yahoo.Com"><span class="ltr_text"style="color:white">CobiaxShiraz@Yahoo.Com</span></a></li>
+                        <li><i class="fa fa-volume-control-phone"></i><a href="callto:09178186221"><small style="padding-left:3%;color:white">مهندس زارعی</small><span class="ltr_text" style="color:white">09178186221</span> </a></li>
+                        <li><i class="fa fa-volume-control-phone"></i><a href="callto:09173218076"><small style="padding-left:3%;color:white">مهندس کشتکاری</small><span class="ltr_text"style="color:white"> 09173218076   </span></a></li>
+                        <hr />
+                        <li><i class="fa fa-volume-control-phone"></i><a href="callto:07136233967"><small style="padding-left:3%;color:white">شماره تماس شرکت</small><span class="ltr_text" style="color:white"> 071-36233967  </span></a></li>
+
+                       
+
+                    </ul>
+
+                    <div class="ventura-social wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                        <h4>ما را دنبال کنید</h4>
+                        <ul>
+
+                            @foreach (var item in ViewBag.showallsocialnetwoks as IEnumerable<Cobiax.Models.SocialNetwork>)
+                            {
+                                <li><a href="@item.facebook"><i class="fa fa-facebook"></i></a></li>
+                               
+                                <li><a href="@item.Teleg"><i class="fa fa-telegram"></i></a></li>
+                                <li><a href="@item.Instag"><i class="fa fa-instagram"></i></a></li>
+                           
+                            }
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-offset-2 col-sm-6 col-xs-12">
+                <div class="main-contact-form wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    @*<form action="contact-1.html">*@
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div style="font-size:medium;color:green;font-family:Tahoma"id="TxtShowSuccessAsSendMsg"></div>
+                                <hr />
+                                <input id="txtname" name="nameandfamily" placeholder="نام و نام خانوادگی *" type="text" required="required"/>
+                                <input id="txtemail" name="email" placeholder="* ایمیل" type="email" required="required" dir="ltr"style="color:white">
+                                <input id="txtphonenumber" name="phonenumber" placeholder="شماره تماس" type="text">
+                                <input id="txtsubject" name="subject" placeholder="موضوع" type="text">
+                                <textarea id="txttext" name="text"  placeholder="پیام *" required="required"></textarea>
+                                <input id="btnsendContact" value="ارسال پیام" type="submit">
+                            </div>
+                        </div>
+                    @*</form>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $(btnsendContact).click(function () {
+        jQuery.post('/home/contactusconfirm', {
+            nameandfamily: $(txtname).val(), email: $(txtemail).val(), phonenumber: $(txtphonenumber).val(),
+            subject: $(txtsubject).val(), text: $(txttext).val()
+        }, function (ok) {
+            if (ok != null&&ok=="ok") {
+                $(TxtShowSuccessAsSendMsg).html('پیغام شما با موفقیت ارسال شد در اولین فرصت پاسخگوی شما هستیم , با تشکر .')
+                
+            }
+           
+            
+        })
+    })
+</script>

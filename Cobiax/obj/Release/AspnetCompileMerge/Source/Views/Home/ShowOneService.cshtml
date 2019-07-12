@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "ShowOneService";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+@for (int i = 0; i < 5; i++)
+{
+    <br />
+}
+@foreach (var item in ViewBag.ShowOneService as IEnumerable<Cobiax.Models.Sp_Readservicesone_Result>)
+{
+    <div class="container text-center">
+        <div class="pull-left" style="font-size:large">@item.Subject</div>
+        <br />
+        <hr />
+        <div>@Html.Raw(item.Text)</div>
+    </div>
+}
+
+@for (int i = 0; i < 10; i++)
+{
+    <br />
+}
+

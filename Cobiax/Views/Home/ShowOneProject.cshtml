@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "ShowOneProject";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+@for (int i = 0; i < 5; i++)
+{
+    <br />
+}
+@foreach (var item in ViewBag.ShowOneProject as IEnumerable<Cobiax.Models.Sp_ReadProjectone_Result>)
+{
+    <div class="container text-center">
+        <div class="pull-left"style="font-size:large">@item.Name</div>
+        <br />
+        <hr />
+        <div>@Html.Raw(item.Text)</div>
+    </div>
+}
+
+@for (int i = 0; i < 10; i++)
+{
+    <br />
+}

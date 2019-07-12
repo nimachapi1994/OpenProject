@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "ShowAllProjects";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+@for (int i = 0; i < 4; i++)
+{
+    <br />
+}
+<div class="container text-center" style="font-family:Tahoma;font-size:xx-large">پروژه های ما</div>
+   <section class="post-area blog-page section-padding">
+    <div class="container">
+        <div class="row">
+            
+            @foreach (var item in ViewBag.showAllProjects as IEnumerable<Cobiax.Models.Sp_ReadProject_Result>)
+            {
+                <div class="col-md-4 col-sm-6"style="border:1px solid #808080;border-radius:10px">
+                    <a href="single-blog-2.html" class="single-post-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="post-thumb">
+                            <span>آپارتمان</span>
+                            <a href="/home/ShowOneProject?id=@item.Id">
+                                <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" alt="@item.Name">
+                            </a>
+                        </div>
+
+                        <div class="post-content text-center">
+                            <a href="/home/ShowOneProject?id=@item.Id"style="font-size:x-large">@item.Name</a>
+                            <div class="author-box">
+                                <div class="author-img">
+                                 
+                                </div>
+
+                                <a class="btn btn-success"href="/home/ShowOneProject?id=@item.Id">مشاهده بیشتر</a>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+         
+
+        </div>
+
+    </div>
+
+</section>
+   
+@for (int i = 0; i < 8; i++)
+{
+    <br />
+}
+

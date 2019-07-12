@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cobiaxsh_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="ContactU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameAndFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContentPage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PageTxt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MainSlider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Page">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Page1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Text" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SocialNetwork">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Teleg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Instag" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="facebook" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="CobiaxDb" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="ContactUs" EntityType="Self.ContactU" />
+    <EntitySet Name="ContentPages" EntityType="Self.ContentPage" />
+    <EntitySet Name="MainSliders" EntityType="Self.MainSlider" />
+    <EntitySet Name="Pages" EntityType="Self.Page" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="SocialNetworks" EntityType="Self.SocialNetwork" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <FunctionImport Name="Sp_findoneproject" ReturnType="Collection(Int32)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_findoneservice" ReturnType="Collection(Int32)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_ReadContactUs" ReturnType="Collection(cobiaxsh_dbModel.Sp_ReadContactUs_Result)" />
+    <FunctionImport Name="Sp_ReadPage" ReturnType="Collection(cobiaxsh_dbModel.Sp_ReadPage_Result)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_readPageOne" ReturnType="Collection(Int32)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_ReadProject" ReturnType="Collection(cobiaxsh_dbModel.Sp_ReadProject_Result)" />
+    <FunctionImport Name="Sp_ReadProjectone" ReturnType="Collection(cobiaxsh_dbModel.Sp_ReadProjectone_Result)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Readservices" ReturnType="Collection(cobiaxsh_dbModel.Sp_Readservices_Result)" />
+    <FunctionImport Name="Sp_Readservicesone" ReturnType="Collection(cobiaxsh_dbModel.Sp_Readservicesone_Result)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_ReadSlider" ReturnType="Collection(cobiaxsh_dbModel.Sp_ReadSlider_Result)" />
+    <FunctionImport Name="Sp_SelectOnePage" ReturnType="Collection(cobiaxsh_dbModel.Sp_SelectOnePage_Result)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ShowSlider" ReturnType="Collection(cobiaxsh_dbModel.sp_ShowSlider_Result)" />
+    <FunctionImport Name="Sp_UpdateOnePage">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+      <Parameter Name="txt" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Sp_ReadContactUs_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="NameAndFamily" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Subject" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Text" Nullable="true" MaxLength="2000" />
+  </ComplexType>
+  <ComplexType Name="Sp_ReadPage_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="PageTxt" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Sp_ReadProject_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="Logo" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Text" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="Sp_ReadProjectone_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="Logo" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Text" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="Sp_Readservices_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Binary" Name="Logo" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Subject" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Text" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="Sp_Readservicesone_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Binary" Name="Logo" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Subject" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Text" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="Sp_ReadSlider_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Binary" Name="Image" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="Sp_SelectOnePage_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="PageTxt" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_ShowSlider_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Binary" Name="Image" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,79 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 20/08/2017 17:42
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}
+
+.flaticon-message:before { content: "\f100"; }
+.flaticon-envelope:before { content: "\f101"; }
+.flaticon-mail:before { content: "\f102"; }
+.flaticon-close-envelope:before { content: "\f103"; }
+.flaticon-earth-globe-1:before { content: "\f104"; }
+.flaticon-earth-globe:before { content: "\f105"; }
+.flaticon-world:before { content: "\f106"; }
+.flaticon-internet:before { content: "\f107"; }
+.flaticon-placeholder-2:before { content: "\f108"; }
+.flaticon-facebook-placeholder-for-locate-places-on-maps:before { content: "\f109"; }
+.flaticon-placeholder-1:before { content: "\f10a"; }
+.flaticon-placeholder:before { content: "\f10b"; }
+.flaticon-bank-building:before { content: "\f10c"; }
+.flaticon-shop:before { content: "\f10d"; }
+.flaticon-home-1:before { content: "\f10e"; }
+.flaticon-home-page:before { content: "\f10f"; }
+.flaticon-home:before { content: "\f110"; }
+.flaticon-house-1:before { content: "\f111"; }
+.flaticon-floral-design-with-symmetry:before { content: "\f112"; }
+.flaticon-floral-design-variant-with-vines-and-lines:before { content: "\f113"; }
+.flaticon-floral-vines-design-mirror-effect:before { content: "\f114"; }
+.flaticon-floral-design-with-butterflies-and-vines-mirror-effect:before { content: "\f115"; }
+.flaticon-flower-bud-outline-and-vines-design:before { content: "\f116"; }
+.flaticon-flower-bud-design-with-vines-and-leaves-silhouette:before { content: "\f117"; }
+.flaticon-floral-design-with-vines-and-swirls:before { content: "\f118"; }
+.flaticon-login:before { content: "\f119"; }
+.flaticon-avatar:before { content: "\f11a"; }
+.flaticon-users:before { content: "\f11b"; }
+.flaticon-multiple-users-silhouette:before { content: "\f11c"; }
+.flaticon-sent-mail:before { content: "\f11d"; }
+.flaticon-paper-plane:before { content: "\f11e"; }
+.flaticon-interior-design:before { content: "\f11f"; }
+.flaticon-house-plans:before { content: "\f120"; }
+.flaticon-plan:before { content: "\f121"; }
+.flaticon-house:before { content: "\f122"; }
+.flaticon-download:before { content: "\f123"; }
+.flaticon-next:before { content: "\f124"; }
+.flaticon-back:before { content: "\f125"; }
+.flaticon-turn-right:before { content: "\f126"; }
+.flaticon-skyline:before { content: "\f127"; }
+.flaticon-building:before { content: "\f128"; }
+.flaticon-cityscape:before { content: "\f129"; }
+.flaticon-house-repair:before { content: "\f12a"; }
+.flaticon-mouse:before { content: "\f12b"; }
+.flaticon-security-code:before { content: "\f12c"; }
+.flaticon-happiness:before { content: "\f12d"; }
+.flaticon-coffee-cup:before { content: "\f12e"; }
+.flaticon-trophy:before { content: "\f12f"; }
+.flaticon-smartphone-call:before { content: "\f130"; }

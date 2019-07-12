@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Designing";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1 col-sm-1 col-xs-1"></div>
+        @foreach (var item in ViewBag.show as IEnumerable<Cobiax.Models.Sp_SelectOnePage_Result>)
+        {
+            <div class="col-md-10">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="font-family :Tahoma;font-size:medium ;text-align:right">
+                    <h2 class="pull-left"> طراحی</h2>
+                    <br />
+                    <hr />
+                    <div dir="rtl" style="text-align:right"><p>@Html.Raw(item.PageTxt)</p></div>
+                </div>
+            </div>
+        }
+
+        <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+</div>
+
+@for (int i = 0; i < 5; i++)
+{
+    <br />
+}
+
+

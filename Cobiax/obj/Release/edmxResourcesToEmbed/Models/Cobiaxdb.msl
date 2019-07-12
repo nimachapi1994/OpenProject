@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cobiaxsh_dbModelStoreContainer" CdmEntityContainer="CobiaxDb">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactUs">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.ContactU">
+        <MappingFragment StoreEntitySet="ContactUs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NameAndFamily" ColumnName="NameAndFamily" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContentPages">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.ContentPage">
+        <MappingFragment StoreEntitySet="ContentPages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PageTxt" ColumnName="PageTxt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainSliders">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.MainSlider">
+        <MappingFragment StoreEntitySet="MainSlider">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pages">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.Page">
+        <MappingFragment StoreEntitySet="Pages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Page1" ColumnName="Page" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialNetworks">
+      <EntityTypeMapping TypeName="cobiaxsh_dbModel.SocialNetwork">
+        <MappingFragment StoreEntitySet="SocialNetworks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Teleg" ColumnName="Teleg" />
+          <ScalarProperty Name="Instag" ColumnName="Instag" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="cobiaxsh_dbModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_findoneproject" FunctionName="cobiaxsh_dbModel.Store.Sp_findoneproject" />
+    <FunctionImportMapping FunctionImportName="Sp_findoneservice" FunctionName="cobiaxsh_dbModel.Store.Sp_findoneservice" />
+    <FunctionImportMapping FunctionImportName="Sp_ReadContactUs" FunctionName="cobiaxsh_dbModel.Store.Sp_ReadContactUs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.Sp_ReadContactUs_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NameAndFamily" ColumnName="NameAndFamily" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ReadPage" FunctionName="cobiaxsh_dbModel.Store.Sp_ReadPage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.Sp_ReadPage_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PageTxt" ColumnName="PageTxt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_readPageOne" FunctionName="cobiaxsh_dbModel.Store.Sp_readPageOne" />
+    <FunctionImportMapping FunctionImportName="Sp_ReadProject" FunctionName="cobiaxsh_dbModel.Store.Sp_ReadProject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.Sp_ReadProject_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ReadProjectone" FunctionName="cobiaxsh_dbModel.Store.Sp_ReadProjectone">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.Sp_ReadProjectone_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Readservices" FunctionName="cobiaxsh_dbModel.Store.Sp_Readservices">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.Sp_Readservices_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Readservicesone" FunctionName="cobiaxsh_dbModel.Store.Sp_Readservicesone">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.Sp_Readservicesone_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ReadSlider" FunctionName="cobiaxsh_dbModel.Store.Sp_ReadSlider">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.Sp_ReadSlider_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_SelectOnePage" FunctionName="cobiaxsh_dbModel.Store.Sp_SelectOnePage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.Sp_SelectOnePage_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PageTxt" ColumnName="PageTxt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ShowSlider" FunctionName="cobiaxsh_dbModel.Store.sp_ShowSlider">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cobiaxsh_dbModel.sp_ShowSlider_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_UpdateOnePage" FunctionName="cobiaxsh_dbModel.Store.Sp_UpdateOnePage" />
+  </EntityContainerMapping>
+</Mapping>
